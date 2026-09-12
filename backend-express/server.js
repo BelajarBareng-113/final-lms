@@ -9,10 +9,10 @@ const app = express();
 // 1. Definisikan semua URL frontend yang diizinkan mengakses API ini
 // (Silakan ganti URL production sesuai dengan URL asli dari Vercel Anda nanti)
 const allowedOrigins = [
-    'https://frontend-user-tau.vercel.app',            // Frontend User (Production)
-    'https://frontend-admin-lilac.vercel.app',      // Frontend Admin (Production) -> *Perbaikan: ubah subdomain agar berbeda
-    'http://localhost:1133',            // Frontend User (Development)
-    'http://localhost:5173'             // Frontend Admin (Development)
+    proccess.env.URL_USER,            // Frontend User (Production)
+    proccess.env.URL_ADMIN,      // Frontend Admin (Production) -> *Perbaikan: ubah subdomain agar berbeda
+    //'http://localhost:1133',            // Frontend User (Development)
+    //'http://localhost:5173'             // Frontend Admin (Development)
 ];
 
 // 2. Aktifkan Dynamic CORS Middleware (Cukup Panggil Sekali)
@@ -34,7 +34,7 @@ app.use(cors({
 app.use(express.json());
 
 // Sambungkan rute API utama
-app.use('/api', apiRoutes);
+// app.use('/api', apiRoutes);
 
 module.exports = app; 
 
