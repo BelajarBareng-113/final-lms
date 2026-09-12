@@ -9,8 +9,8 @@ const app = express();
 // 1. Definisikan semua URL frontend yang diizinkan mengakses API ini
 // (Silakan ganti URL production sesuai dengan URL asli dari Vercel Anda nanti)
 const allowedOrigins = [
-    //'https://mywebsite.com',            // Frontend User (Production)
-    //'https://admin.mywebsite.com',      // Frontend Admin (Production) -> *Perbaikan: ubah subdomain agar berbeda
+    'https://frontend-user-tau.vercel.app',            // Frontend User (Production)
+    'https://frontend-admin-lilac.vercel.app',      // Frontend Admin (Production) -> *Perbaikan: ubah subdomain agar berbeda
     'http://localhost:1133',            // Frontend User (Development)
     'http://localhost:5173'             // Frontend Admin (Development)
 ];
